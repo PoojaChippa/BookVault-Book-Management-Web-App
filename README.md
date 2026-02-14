@@ -13,9 +13,7 @@ The project focuses on simplicity, responsive design, and a modern user interfac
 
     Deployed Project:
 
-👉 https://your-username.github.io/bookvault/
-
-Replace the link above with your real deployment URL after publish
+👉 https://poojachippa.github.io/BookVault-Book-Management-Web-App/
 
 ## Features
 
