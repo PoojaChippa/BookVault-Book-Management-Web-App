@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js"></script>
+    <script>requireAuth();</script>
+</head>
+
+<body>
+
+    <div class="dashboard-main">
+
+        <header class="topbar">
+            <h2 class="logo">📚 BookPanel</h2>
+
+            <div>
+                <span class="user-badge">👤 admin@gmail.com</span>
+                <button class="secondary-btn" onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+
+            <!-- ADD BOOK -->
+            <section class="card form-card">
+                <h2>Add New Book</h2>
+
+                <form id="bookForm" class="grid-form">
+                    <input id="title" placeholder="Book Title" required>
+                    <input id="author" placeholder="Author" required>
+
+                    <select id="category">
+                        <option value="">Category</option>
+                        <option>Fiction</option>
+                        <option>Comedy</option>
+                        <option>Technical</option>
+                    </select>
+
+                    <button class="primary-btn">Add Book</button>
+                </form>
+            </section>
+
+            <!-- CONTROLS -->
+            <section class="card controls-flex">
+
+                <div>
+                    <h3>Sort</h3>
+                    <button id="sortAz" class="secondary-btn">A → Z</button>
+                    <button id="sortZa" class="secondary-btn">Z → A</button>
+                </div>
+
+                <div>
+                    <h3>Filter</h3>
+                    <select id="filterSelect">
+                        <option>All</option>
+                        <option>Fiction</option>
+                        <option>Comedy</option>
+                        <option>Technical</option>
+                    </select>
+                </div>
+
+            </section>
+
+            <!-- BOOK LIST -->
+            <section class="card">
+                <h2>Your Books</h2>
+                <div id="bookList" class="books-grid"></div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

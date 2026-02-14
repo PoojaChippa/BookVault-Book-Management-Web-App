@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="auth-wrapper">
+
+    <form class="auth-card" id="signupForm">
+
+        <h2 class="auth-title">Create Account</h2>
+
+        <input id="username" placeholder="Username" required>
+        <input id="password" type="password" placeholder="Password" required>
+
+        <button class="primary-btn">Sign Up</button>
+
+        <p class="auth-link">
+            Already have account?
+            <a href="login.html">Login</a>
+        </p>
+
+    </form>
+
+    <script src="auth.js"></script>
+    <script>
+        signupForm.onsubmit = e => {
+            e.preventDefault();
+            const res = signup(username.value, password.value);
+
+            if (res === "success") {
+                alert("Account created");
+                location.href = "login.html";
+            } else alert(res);
+        };
+    </script>
+
+</body>
+
+</html>
